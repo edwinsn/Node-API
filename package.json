@@ -1,0 +1,32 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --inspect index.js",
+    "testdata": "node test/testdata.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edwinsn/Node-API.git"
+  },
+  "keywords": [
+    "node",
+    "api"
+  ],
+  "author": "Edwinsn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edwinsn/Node-API/issues"
+  },
+  "homepage": "https://github.com/edwinsn/Node-API#readme"
+}
