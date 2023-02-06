@@ -4,7 +4,7 @@ const url = require('url')
 const StringDecoder = require('string_decoder').StringDecoder
 const config = require('./config')
 const fs = require('fs')
-const handlers = require('./lib/handlers')
+const router = require('./lib/router')
 
 //HTTP server instance
 
@@ -22,7 +22,7 @@ httpServer.listen(config.httpPort, () => {
 
 const httpsServerOptions = {
 	key: fs.readFileSync('./https/key.pem'),
-	cert: fs.readFileSync('./https/cert-pem')
+	cert: fs.readFileSync('./https/cert.pem')
 }
 
 const httpsServer = https.createServer(httpsServerOptions, (req, res) => {
@@ -83,7 +83,7 @@ var unifiedServer = (req, res) => {
 			bufferForPayload
 		}
 
-		const choosenHandler = typeof (router[trimmedPath]) !== 'undefined' ? router[trimmedPath] : handlers.notFound
+		const choosenHandler = typeof (router[trimmedPath]) !== 'undefined' ? router[trimmedPath] : router['notFound']
 
 		console.log({ trimmedPath })
 
@@ -117,11 +117,3 @@ var unifiedServer = (req, res) => {
 	})
 
 }
-
-//Router
-
-const router = {
-	ping: handlers.ping,
-	users: handlers.users
-}
-
