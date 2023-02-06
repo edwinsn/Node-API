@@ -5,6 +5,7 @@ const StringDecoder = require('string_decoder').StringDecoder
 const config = require('./config')
 const fs = require('fs')
 const router = require('./lib/router')
+const helpers = require('./lib/helpers')
 
 //HTTP server instance
 
@@ -80,12 +81,10 @@ var unifiedServer = (req, res) => {
 			queryStringObject,
 			method,
 			headers,
-			bufferForPayload
+			payload: helpers.parseJsonToObject(bufferForPayload)
 		}
 
 		const choosenHandler = typeof (router[trimmedPath]) !== 'undefined' ? router[trimmedPath] : router['notFound']
-
-		console.log({ trimmedPath })
 
 		//Route the path to the handler
 

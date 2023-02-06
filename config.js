@@ -7,7 +7,8 @@ const enviroments = {}
 enviroments.staging = {
     httpPort:"3000",
     httpsPort:"3001",
-    name:"staging"
+    name:"staging",
+    hashingSecret: 'mySecretReallySecret'
 }
 
 //Production enviroment
@@ -15,7 +16,8 @@ enviroments.staging = {
 enviroments.production = {
     httpPort:"8080",
     httpsPort:"4343",
-    name:"production"
+    name:"production",
+    hashingSecret: 'mySecretReallySecret'
 }
 
 //Export enviroment
