@@ -1,4 +1,5 @@
 node_modules
 https/cert.pem
 https/key.pem
-.data/users
+.data
+config.json
