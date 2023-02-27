@@ -2,4 +2,5 @@ node_modules
 https/cert.pem
 https/key.pem
 .data
+.logs
 config.json
