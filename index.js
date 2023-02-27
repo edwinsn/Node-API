@@ -16,6 +16,7 @@ app.init = function () {
 
 	//Start the workers
 	workers.init()
+
 }
 
 //Execute
