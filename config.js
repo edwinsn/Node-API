@@ -19,7 +19,7 @@ enviroments.staging = {
         appName: 'UptimeChecker',
         companyName: 'Company, Inc.',
         yearCreated: '2021',
-        baseUrl: 'http://localhost:3000/',
+        baseURL: 'http://localhost:3000/',
         siteName: 'UptimeChecker',
     }
 }
@@ -41,7 +41,7 @@ enviroments.production = {
         appName: 'UptimeChecker',
         companyName: 'Company, Inc.',
         yearCreated: '2021',
-        baseUrl: 'http://localhost:3001/',
+        baseURL: 'http://localhost:3001/',
         siteName: 'UptimeChecker',
     }
 }
