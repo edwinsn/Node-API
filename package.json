@@ -11,9 +11,13 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --inspect index.js",
-    "testdata": "node test/testdata.js"
+    "testdata": "node test/testdata.js",
+    "stage": "NODE_ENV=staging nodemon --inspect index.js",
+    "test": "NODE_ENV=test node test",
+    "strict": " node --use_strict index-stric.js",
+    "debug": "node inspect index-debug.js",
+    "runAndShowServerErrors": "NODE_DEBUG=server node index.js"
   },
   "repository": {
     "type": "git",
